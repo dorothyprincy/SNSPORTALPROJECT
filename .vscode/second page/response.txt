@@ -1,0 +1,49 @@
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+const container = document.querySelector(".container");
+
+left.addEventListener("mouseenter", () => {
+  container.classList.add("hover-left");
+});
+
+left.addEventListener("mouseleave", () => {
+  container.classList.remove("hover-left");
+});
+
+right.addEventListener("mouseenter", () => {
+  container.classList.add("hover-right");
+});
+
+right.addEventListener("mouseleave", () => {
+  container.classList.remove("hover-right");
+});
+// var today = new Date();
+// var dd = String(today.getDate()).padStart(2, '0');
+// var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+// var yyyy = today.getFullYear();
+
+// today = yyyy + '-' + mm + '-' + dd;
+// var aftertwoDays = new Date();
+// aftertwoDays.setDate(aftertwoDays.getDate() + 2);
+// var afdDd = String(aftertwoDays.getDate()).padStart(2, '0');
+// var afdMm = String(aftertwoDays.getMonth() + 1).padStart(2, '0'); 
+// var afdYyyy = aftertwoDays.getFullYear();
+
+// aftertwoDays = afdYyyy + '-' + afdMm + '-' + afdDd;
+// document.getElementById("datepicker").setAttribute("min", aftertwoDays);
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+var afterFiveDays = new Date();
+afterFiveDays.setDate(afterFiveDays.getDate() + 5);
+var afdDd = String(afterFiveDays.getDate()).padStart(2, '0');
+var afdMm = String(afterFiveDays.getMonth() + 1).padStart(2, '0'); 
+var afdYyyy = afterFiveDays.getFullYear();
+
+afterFiveDays = afdYyyy + '-' + afdMm + '-' + afdDd;
+document.getElementById("datepicker").setAttribute("min", afterFiveDays);
+   

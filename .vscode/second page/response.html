@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="response.css">  
+   
+    
+    
+    <title>Split Landing</title>
+    
+</head>
+<body>
+  <div class="container">
+    <div class="split left">
+      <h4> Request
+        <label for="selected_date">Select Date:</label>
+        <input type="date" id="datepicker">
+
+        <p> note:you have away after 2 days </p>
+        <label for="request-time">Permission time:</label>
+        <input type="time" id="request-time" name="request-time" required>
+        <p> note:you have away after 2hr/month </p>
+        <!-- <div class="select-option">
+          <select>
+            <option value="option1">Personal Permission</option>
+            <option value="option2">Funtion Permission</option>
+            <option value="option3">Medical Permission</option>
+
+
+
+            
+            <option value="option3">other</option>
+          </select>
+        </div> -->
+        <div class="reason">  
+           <h3> reason : </h3>
+          <div class="text-box">
+            <input type="text" id="user-input" placeholder="Enter text here">
+          </div>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+        <div id="request-results"></div>
+      </h4>
+    </div>
+    <div class="split right">
+       <div class="popup" id="popup">
+         <h4>Response
+          <div class="popup-content">
+            <h2>your requset has denied</h2>
+            <div class="Reason">  
+              <h3> Reason : </h3>
+             <div class="text-box">
+               <input type="text" id="user-input" placeholder="Enter text here">
+             </div>
+            </div>
+           <br>
+           <button type="submit">Submit</button>
+           <h2>your request accepted</h2>
+          </div>
+        </h4>
+          
+       </div>
+    </div>      
+  </div>
+  <script src="response.js"></Script>
+</body>
+</html>  
+
+
+
+
+<!-- import string
+
+users = ['hemapriya', 'dorothy', 'geetha']
+caps = string.ascii_uppercase
+numbers = []
+for i in range(10):
+    numbers.append(str(i))
+special_chars = ['!', '@', '#', '$']
+name_check = False
+
+
+def name_available(name):
+    if name.title() in users:
+        return False
+    else:
+        return True
+
+
+def number_found(name):
+    found = False
+    for number in numbers:
+        if name.find(number) > -1:
+            found = True
+    return found
+
+
+def caps_found(pw):
+    found = False
+    for letter in caps:
+        if pw.find(letter) > -1:
+            found = True
+    return found
+
+
+def special_found(pw):
+    found = False
+    for char in special_chars:
+        if pw.find(char) > -1:
+            found = True
+    return found
+
+
+while True:
+    if not name_check:
+        username = input("Enter your username: ")
+        if name_available(username):
+            if not number_found(username):
+                if 2 < len(username) < 15:
+                    name_check = True
+                    users.append(username)
+                    print("Username created")
+                else:
+                    print("Username must be between 3 and 14 characters long")
+            else:
+                print("Username cannot contain numbers")
+        else:
+            print("Please choose another username")
+    else:
+        password = input("Enter your password: ")
+        if caps_found(password):
+            if special_found(password):
+                if number_found(password):
+                    if len(password) > 7:
+                        print(f'Your username is {username} and your password is {password}')
+                        break
+                    else:
+                        print("Password must be at least 8 characters long")
+                else:
+                    print("Password must contain a number")
+            else:
+                print("Password must contain a special character ('!', '@', '#', '$')")
+        else:
+            print("Password must contain a capital letter") -->

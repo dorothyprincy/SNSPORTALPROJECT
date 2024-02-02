@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal</title>
+    <link rel="stylesheet" href="date.css">
+    <link rel="javascript" href="date.js">
+</head>
+<body>
+    <h1>Permission Request</h1>
+    <form id="request-form">
+      <label for="request-description">Permisson Description:</label>
+      <br>
+      <textarea id="request-description" name="request-description" required></textarea>
+      <br> 
+         <label for="request-date">Permission Date:</label>
+         <input type="date" id="request-date" name="request-date" required>
+         <p> note:you have away after 2 days </p>
+         <button type="ok">ok</button>
+            
+        
+        <label for="request-date">Permission Date:</label>
+        <input type="date" id="request-date" name="request-date" required>
+        <p> note:you have away after 2 days </p>
+        <button type="ok">ok</button>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="request-results"></div>
+
+</body>
+</html>
+
+body { 
+    font-family: Arial, sans-serif;
+  } 
+  
+  form { 
+    display: inline-block;
+    margin-bottom: 2em;
+    padding: auto;
+    
+  
+  } 
+  label { 
+    display: block; 
+    margin-top: 1em;
+   
+     
+  } 
+  input[type="date"] {
+     width: 100%;
+     padding: 0.5em; 
+     margin-top: 0.5em;
+     display: flex;
+  } 
+  button[type="submit"],[type="ok"] { 
+     background-color: purple; 
+     color: white; 
+     padding: 0.5em 1em;
+     border: none; 
+     cursor: pointer; 
+     margin-top: 1em; 
+  } 
+  <div class="sidebar">
+    <h1 class="logo">Dashboard </h1>
+    
+    <div class="profile-dropdown">
+      <div class="profile-dropdown-btn">
+      <span>
+        <a href="#"><ion-icon name="newspaper-outline"></ion-icon></a>
+        Permission
+        <i class="fa-solid fa-angle-down"></i>
+      </span> 
+      </div>
+      <ul class="profile-dropdown-list">
+        <li class="profile-dropdown-list-item">
+          <a href="#"> Request </a>
+        </li>
+      </ul>
+    <a href="#"><ion-icon name="newspaper-outline"></ion-icon> Permission</a>
+    <div class="Permission-list">
+      <select>
+
+        <option value="0"> Select option</option>
+        <option value="1"> Request</option>
+        <option value="2"> Response</option>
+
+
+
+      </select>
+    </div>
+    </div>
+    const showPassword = document.querySelector
+("#show-password");
+const passwordField= document.querySelector
+("#hide-password");
+
+showPassword.addEventListener("click", function(){
+this.classList.toggle("fa-eye-slash");
+const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+passwordField.setAttribute("type", type);
+})

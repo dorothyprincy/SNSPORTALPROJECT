@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnS Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap">
+    <link rel="stylesheet" href="page3.css">
+    
+    
+</head>
+<body>
+    
+        <div class="sidebar">
+            <div class="sidebar-name"> 
+                <h1>
+                  <a href="#"> SnS Portal</a>
+                </h1> 
+            </div>
+                    
+            <div class="menu-items">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="link-name"> Permission</span> 
+                           
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hema.html">
+                            <span class="link-name"> Leave</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="link-name"> Access</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="link-name"> Logout</span>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <header>
+                <h2>
+                    <label for="">
+                        <span class="las la-bars"></span>
+                    </label>
+                    Dashboard
+                </h2>
+                <div class="user-wrapper">
+                    <div>
+                      <h3> Username</h3>
+                      <small> Designation</small>
+                    </div>
+                </div>
+                 </header>
+                 </div>
+                 
+
+  <div class="container">
+   <div class="dorothy">
+    <section class="paid leave">
+      <h1>paid leave</h1>
+      <div class="content">
+      <label for="request-date">leave Date:</label>
+        <input type="date" id="request-date" name="request-date" required>
+        <p> note:you have leave after 5 days </p>  
+        <div class="reason">
+          <h3> Reason:</h3> 
+          
+        <div class="text-box">
+          <input type="text" id="user-input" placeholder="Enter text here">
+        
+         <div class="dropdown">
+            <div class="select">
+              <div class="caret"></div>
+            </div>
+          </div>
+          </div>
+      </div>
+      <br>
+        <button type="submit">Submit</button>
+    </section>
+  </div>
+<div class="hema">
+    <section class="sick leave">
+      <h1>sick leave</h1>
+      <div class="content">
+      <label for="request-date">leave Date:</label>
+        <input type="date" id="request-date" name="request-date" required>
+        <p> note:you have leave after 5 days </p>
+        <div class="reason">
+          <h3> Reason:</h3>
+          
+        <div class="text-box">
+          <input type="text" id="user-input" placeholder="Enter text here">
+        
+           <div class="dropdown">
+            <div class="select">
+              <div class="caret"></div>
+            </div>
+          </div>
+          </div>
+          <br>
+        <button type="submit">Submit</button>
+    </section>
+    </div>
+<div class="geetha">
+    <section class="casual leave">
+      <h1>casual leave</h1>
+      <div class="content">
+      <label for="request-date">leave Date:</label>
+        <input type="date" id="request-date" name="request-date" required>
+        <p> note:you have leave after 5 days  </p>
+        <div class="reason">
+          <h3> Reason:</h3>
+          
+        <div class="text-box">
+          <input type="text" id="user-input" placeholder="Enter text here">
+        </div>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+      </section>
+    </div>
+   
+
+  </div>
+
+</body>
+</html>
+<style>
+ :root {
+   
+    --left-bg-color: rgba(240, 57, 164, 0.884);
+    --left-button-hover-color: rgba(161, 11, 11, 0.3);
+    --right-bg-color: #f16debcc;
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --middle-bg-color: rgba(240, 57, 164, 0.884);
+    --middle-button-hover-color: rgba(161, 11, 11, 0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+  }
+  
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.hema{
+  background-color: rgba(240, 57, 164, 0.884) ;
+  height:100%;
+  align-items: center;
+ justify-content: center;
+ flex:1;
+ transition: all .5s;
+ text-align: center;
+
+}
+.container {
+  width: 85%;
+  height:100vh;
+  display: flex;
+  color:white;
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 0;
+
+}
+.content{
+  margin-top: 30%;
+}
+
+.dorothy {
+  height:100%;
+ text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex:1;
+  transition: all .5s;
+  background-color: rgb(163, 33, 163);
+}
+
+.dorothy:hover {
+  flex:2;
+}
+.hema:hover {
+  flex:2;
+}
+.geetha:hover {
+  flex:2;
+}
+
+.geetha {
+  height:100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex:1;
+  transition: all .5s;
+  background-color:  #f16debcc;
+}
+
+.dorothy h1 .paid-leave {
+  background:rgb(163, 33, 163);
+  position :relative;
+
+  
+  padding: 12px 32px;
+}
+.geetha h1 .casual-leave{
+  background:#f16debcc;
+  
+  padding: 12px 32px;
+}
+.hema h1 .sick-leave{
+  background:rgba(240, 57, 164, 0.884);
+  
+  padding: 12px 32px;
+}
+
+
+h1 {
+  font-size: 3rem;
+  animation: textColorChange 10s infinite;
+}
+.text-box {
+  width:40%;
+  height: 100px;
+  background-color: #f2f2f2;
+  padding: 5px;
+  margin: 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  
+} 
+.reason{
+  text-align: 10%;
+  
+}
+
+button[type="submit"]{ 
+     background-color: purple; 
+     color: white; 
+     padding: 0.5em 1em;
+     border: none; 
+     cursor: pointer; 
+     margin-top: 1em;
+    
+  }
+</style>
+

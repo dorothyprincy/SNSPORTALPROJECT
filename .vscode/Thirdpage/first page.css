@@ -1,0 +1,36 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container {
+            width: 400px;
+            margin: 250px auto;
+            background-color: lightgray;
+            padding: 50px;
+            border-radius: 50px;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+ .login-btn {
+            display: block;
+            width: 95%;
+            padding: 10px;
+            background-color: purple;
+            color: white;
+            text-align: center;
+            border-radius: 20px ;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        .login-btn:hover {
+            background-color: purple;
+        }
+    

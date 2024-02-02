@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnS Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap">
+    <link rel="stylesheet" href="page3.css">
+    
+    
+</head>
+<body>
+    
+        <div class="sidebar">
+            <div class="sidebar-name"> 
+                <h1>
+                  <a href="page3.html"> SnS Portal</a>
+                </h1> 
+            </div>
+                    
+            <div class="menu-items">
+                <ul>
+                    <li>
+                        <a href="geetha.html">
+                            <span class="link-name"> Permission</span> 
+                           
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hema.html">
+                            <span class="link-name"> Leave</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="link-name"> Access</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="link-name"> Logout</span>   
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <header>
+                <h2>
+                    <label for="">
+                        <span class="las la-bars"></span>
+                    </label>
+                    Dashboard
+                </h2>
+                <div class="user-wrapper">
+                    <div>
+                      <h3> Username</h3>
+                      <small> Designation</small>
+                    </div>
+                </div>
+                 </header>
+                 </div>
+                
+                    <!-- <div class="container">
+                       
+                        <div class="split-center">
+                          <h4> Request </h4>
+                          <div class="content1">
+                            <label for="request-date">Permission Date:</label>
+                            <input type="date" id="request-date" name="request-date" required>
+                            <p> note:you have away after 2 days </p>
+                            <label for="request-time">Permission time:</label>
+                            <input type="time" id="request-time" name="request-time" required>
+                            <p> note:you have away after 2hr/month </p>
+                                    
+                            <br>
+                            <button type="submit">Submit</button>
+                        
+                            <div id="request-results"></div>
+                          </h4>
+                        </div>
+                        </div>
+                
+                <div class="card-right">
+                        <div class="card-tag">
+                            <h4>Response</h4>
+                            <div class="content2">
+                                <label for="request-date">Permission Date:</label>
+                                <input type="date" id="request-date" name="request-date" required>
+                                <p> note:you have away after 2 days </p>
+                                <label for="request-time">Permission time:</label>
+                                <input type="time" id="request-time" name="request-time" required>
+                                <p> note:you have away after 2hr/month </p>
+                                        
+                                <br>
+                                <button type="submit">Submit</button>
+                            
+                                <div id="request-results"></div>
+                              </h4>
+                            </div>
+                          </div>
+                        
+                          </div> -->
+                          
+                          
+                            <!-- <div class="container">
+                              <div class="split left">
+                                <h4> Request
+                                  <label for="request-date">Permission Date:</label>
+                                  <input type="date" id="request-date" name="request-date" required>
+                                  <p> note:you have away after 2 days </p>
+                                  <label for="request-time">Permission time:</label>
+                                  <input type="time" id="request-time" name="request-time" required>
+                                  <p> note:you have away after 2hr/month </p>
+                                  <div class="reason">  
+                                     <h3> reason : </h3>
+                                    <div class="text-box">
+                                      <input type="text" id="user-input" placeholder="Enter text here">
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <button type="submit">Submit</button>
+                                  <div id="request-results"></div>
+                                </h4>
+                              </div>
+                              <div class="split right">
+                                 <div class="popup" id="popup">
+                                   <h4>Response
+                                    <div class="popup-content">
+                                      <h2>your request has denied</h2>
+                                      <div class="reason">  
+                                        <h3> reason : </h3>
+                                       <div class="text-box">
+                                         <input type="text" id="user-input" placeholder="Enter text here">
+                                       </div>
+                                      </div>
+                                     <br>
+                                     <button type="submit">Submit</button>
+                                     <h2>your request accepted</h2>
+                                    </div>
+                                  </h4>
+                                    
+                                 </div>
+                              </div>      
+                            </div>
+                            
+                           
+                          <style>
+                              :root {
+                              
+                              --left-bg-color: rgba(240, 57, 164, 0.884);
+                              --left-button-hover-color: rgba(240, 57, 164, 0.884);
+                              --right-bg-color: #f16debcc;
+                              --right-button-hover-color: #f16debcc;
+                              --hover-width: 75%;
+                              --other-width: 25%;
+                              --speed: 1000ms;
+                            }
+                            html, body {
+                              padding:0;
+                              margin:0;
+                              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                              width: 100%;
+                              height: 100%;
+                              overflow-x: hidden;
+                            }
+                            
+                           h4 {
+                              font-size: 1em;
+                              color: #fff;
+                              position: absolute;
+                              left: 50%;
+                              top: 20%;
+                              transform: translateX(-50%);
+                              white-space: nowrap;
+                            }
+                            .container {
+                              position: relative;
+                              width: 100%;
+                              height: 100%;
+                              background-color: white;
+                             
+                            }
+                            .split {
+                              position: absolute;
+                              width: 50%;
+                              height: 100%;
+                              overflow: hidden;
+                            }
+                            .split.left {
+                              left:0;
+                              background-color: rgba(240, 57, 164, 0.884);
+                              background-size: cover;
+                            }
+                            .split.left:before {
+                              position:absolute;
+                              content: "";
+                              width: 100%;
+                              height: 100%;
+                              
+                            }
+                             .split.right {
+                              right:0;
+                              background-color:  #f16debcc;
+                              background-size: cover;
+                            }
+                            
+                            .split.right:before {
+                              position:absolute;
+                              content: "";
+                              width: 100%;
+                              height: 100%;
+                              
+                            }
+                            
+                            .split.left, .split.right, .split.right:before, .split.left:before {
+                              transition: var(--speed) all ease-in-out;
+                            }
+                            
+                            .hover-left .left {
+                              width: var(--hover-width);
+                            }
+                            
+                            .hover-left .right {
+                              width: var(--other-width);
+                            }
+                            
+                            .hover-left .right:before {
+                              z-index: 2;
+                            }
+                            
+                            
+                            .hover-right .right {
+                              width: var(--hover-width);
+                            }
+                            
+                            .hover-right .left {
+                              width: var(--other-width);
+                            }
+                            
+                            .hover-right .left:before {
+                              z-index: 2;
+                            }
+                            
+                            @media(max-width: 800px) {
+                              h1 {
+                                font-size: 2rem;
+                              }
+                            
+                              .button {
+                                width: 12rem;
+                              }
+                            }
+                            
+                            @media(max-height: 700px) {
+                              .button {
+                                top: 70%;
+                              }
+                            }
+                            body { 
+                              font-family: Arial, sans-serif;
+                            } 
+                            
+                            form { 
+                              display: inline-block;
+                              margin-bottom: 2em;
+                              padding: auto;
+                              
+                            
+                            } 
+                            label { 
+                              display: block; 
+                              margin-top: 1em;
+                             
+                               
+                            } 
+                            input[type="date"],[type="time"] {
+                               width: 100%;
+                               padding: 0.5em; 
+                               margin-top: 0.5em;
+                               display: flex;
+                            } 
+                            button[type="submit"]{ 
+                               background-color: purple; 
+                               color: white; 
+                               padding: 0.5em 1em;
+                               border: none; 
+                               cursor: pointer; 
+                               margin-top: 1em;
+                              
+                            }
+                            .text-box {
+                              width: 100%;
+                              height: 100px;
+                              background-color: #f2f2f2;
+                              padding: 5px;
+                              margin: 0 ;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                            }
+                            
+                            input[type="text"] {
+                              width: 100%;
+                              height: 100%;
+                              padding: 5px;
+                              font-size: 18px;
+                              border: none;
+                              outline: none;
+                            } 
+                            .reason{
+                              text-align: left;
+                            }
+                            
+                          </style>
+                          <script>
+                              const left = document.querySelector(".left");
+                          const right = document.querySelector(".right");
+                          const container = document.querySelector(".container");
+                          
+                          left.addEventListener("mouseenter", () => {
+                            container.classList.add("hover-left");
+                          });
+                          
+                          left.addEventListener("mouseleave", () => {
+                            container.classList.remove("hover-left");
+                          });
+                          
+                          right.addEventListener("mouseenter", () => {
+                            container.classList.add("hover-right");
+                          });
+                          
+                          right.addEventListener("mouseleave", () => {
+                            container.classList.remove("hover-right");
+                          });
+                          
+                          </script> -->
+</div>
+
+
+        
+    </div>
+    <script src="page3.js"></Script>
+</body>
+</html>
