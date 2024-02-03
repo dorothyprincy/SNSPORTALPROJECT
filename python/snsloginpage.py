@@ -1,7 +1,8 @@
 from tkinter import*
 import tkinter as tk
 from tkinter import  messagebox
-import mysql.connector as mysql
+import mysql.connector 
+
 
 def initialize_connection():
     username=user.get()
@@ -40,7 +41,11 @@ def initialize_connection():
             messagebox.showinfo("invalid", "Invalid username and password")
 
         else:
-            messagebox.showinfo("Login", "Successfully Login!!")
+            messagebox.showinfo("Login", "Successfully Login!!" )
+            root.destroy()
+            import leavepage
+        
+        
 
 
 background="white"
@@ -49,6 +54,8 @@ root.title("SnS Portal Login")
 root.geometry("300x200")
 root.config(bg=background)
 root.resizable(False,False)
+global user
+global code
 
 Label(root, text="SnS Portal", font=('Times New Roman', 30, 'bold')).grid(row=0, column=3)
 
@@ -93,7 +100,11 @@ code.bind("<FocusIn>", password_enter )
 code.bind("<FocusOut>", password_leave )
 
 #button
+
+
 loginButton=Button(root, text="Submit", height=3, width=10, command=initialize_connection)
 loginButton.place(x=100, y=100)
 
+
+   
 root.mainloop()
