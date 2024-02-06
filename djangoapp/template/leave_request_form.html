@@ -1,0 +1,6 @@
+<!-- leaveapp/templates/leaveapp/leave_request_form.html -->
+<form method="post" action="{% url 'leave_request_form' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>

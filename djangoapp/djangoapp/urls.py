@@ -17,8 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from loginsystem.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('firstpage/',firstpage),
-    path('',firstpage)
+    path('',firstpage),
+    path('login/',login),
+    path('',login),
+    # path('leave_request_form', leave_request_form),
 ]
+
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('leaveapp.urls')),
+# ]

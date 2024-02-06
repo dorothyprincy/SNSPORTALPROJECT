@@ -9,43 +9,56 @@ class loginsystem(models.Model):
 
 
 
-#leave
-from django.db import models
-from django.contrib.auth.models import User
+# #leave
+# from django.db import models
+# from django.contrib.auth.models import User
 
-LEAVE_TYPE_CHOICES = [
-    ('Paid', 'Paid Leave'),
-    ('Unpaid', 'Unpaid Leave'),
-    ('Sick', 'Sick Leave'),
-]
-STATUS_CHOICES = [
-    ('Pending', 'Pending'),
-    ('Approved', 'Approved'),
-    ('Rejected', 'Rejected'),
-]
+# LEAVE_TYPE_CHOICES = [
+#     ('Paid', 'Paid Leave'),
+#     ('Unpaid', 'Unpaid Leave'),
+#     ('Sick', 'Sick Leave'),
+# ]
+# STATUS_CHOICES = [
+#     ('Pending', 'Pending'),
+#     ('Approved', 'Approved'),
+#     ('Rejected', 'Rejected'),
+# ]
 
-class LeaveRequest(models.Model):
-    """
-    A leave request made by an employee.
-    """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+# class LeaveRequest(models.Model):
+#     """
+#     A leave request made by an employee.
+#     """
+#     user = models.ForeignKey(User, on_delete=models.CASCADE)
+#     start_date = models.DateField()
+#     end_date = models.DateField()
+#     leave_type = models.CharField(max_length=10, choices=LEAVE_TYPE_CHOICES)
+#     reason = models.TextField()
+#     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='Pending')
+#     message = models.TextField(blank=True)
+
+#     def _str_(self):
+#         """
+#         Returns a string representation of the leave request.
+#         """
+#         return f'{self.user} - {self.leave_type} - {self.start_date} to {self.end_date}'
+
+# EMPLOYEE_CHOICES = [(user.id, user.get_full_name()) for user in User.objects.all()]
+
+# def get_leave_request(user):
+#     """
+#     Returns the leave requests made by a user, sorted by start date in descending order.
+#     """
+#     return LeaveRequest.objects.filter(user=user).order_by('-start_date')
+
+
+# from django.db import models
+
+class leave_request_form(models.Model):
+    employee_name = models.CharField(max_length=100)
     start_date = models.DateField()
     end_date = models.DateField()
-    leave_type = models.CharField(max_length=10, choices=LEAVE_TYPE_CHOICES)
+    leave_type = models.CharField(max_length=50)
     reason = models.TextField()
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='Pending')
-    message = models.TextField(blank=True)
 
     def _str_(self):
-        """
-        Returns a string representation of the leave request.
-        """
-        return f'{self.user} - {self.leave_type} - {self.start_date} to {self.end_date}'
-
-EMPLOYEE_CHOICES = [(user.id, user.get_full_name()) for user in User.objects.all()]
-
-def get_leave_request(user):
-    """
-    Returns the leave requests made by a user, sorted by start date in descending order.
-    """
-    return LeaveRequest.objects.filter(user=user).order_by('-start_date')
+        return self.employee_name

@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import leave_request_form
 # from django.http import HttpResponse
 
 # #leave
@@ -56,3 +58,22 @@ from django.shortcuts import render
 
 def firstpage(request):
     return render(request,"firstpage.html")
+
+def login(request):
+     return render(request,"login.html")
+
+
+
+def leave_request_form(request):
+    if request.method == 'POST':
+        form = leave_request_form(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success')
+    else:
+        form = leave_request_form()
+
+    return render(request, 'loginsystem/leave_request_form.html', {'form': form})
+
+def success(request):
+    return render(request, 'loginsystem/success.html')
